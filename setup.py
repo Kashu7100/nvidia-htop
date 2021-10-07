@@ -8,7 +8,7 @@ here = pathlib.Path(__file__).parent.resolve()
 # Get the long description from the README file
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
-setup(name='nvidia-htop',
+setup(name='nvidia_htop',
       version='1.0.5',
       description='A tool for enriching the output of nvidia-smi',
       long_description=long_description,
@@ -16,10 +16,11 @@ setup(name='nvidia-htop',
       url='https://github.com/peci1/nvidia-htop',
       author='Martin Pecka',
       author_email='peci1@seznam.cz',
-      entry_points="""
-      [console_scripts]
-      nvidia-htop = nvidia-htop.py:main
-      """,
+      scripts=['script/nvidia_htop.py'],
+      entry_points={
+      "console_scripts":
+      	["nvhtop=nvidia_htop:main"]
+      },
       install_requires=[
         "termcolor"
       ],
