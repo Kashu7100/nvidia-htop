@@ -18,7 +18,7 @@ setup(name='nvidia-htop',
       author_email='peci1@seznam.cz',
       entry_points="""
       [console_scripts]
-      nvidia-htop=nvidia-htop:main
+      nvidia-htop = nvidia-htop.py:main
       """,
       install_requires=[
         "termcolor"
