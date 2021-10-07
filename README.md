@@ -1,20 +1,17 @@
 # nvidia-htop
 
-A tool for enriching the output of `nvidia-smi`.
-
-![CI](https://github.com/peci1/nvidia-htop/workflows/CI/badge.svg)
-[![PyPI version](https://badge.fury.io/py/nvidia-htop.svg)](https://badge.fury.io/py/nvidia-htop)
+A tool for enriching the output of `nvidia-smi`
 
 # Install
-`pip3 install nvidia-htop`
-
-**Yes, this tool has been on PyPi since 2021! Enjoy the super-easy way to install it.**
-
-
+```
+git clone https://github.com/Kashu7100/nvidia-htop.git
+cd nvidia-htop
+python setup.py install
+```
 
 ## Usage
 
-    nvidia-htop.py [-l [length]]
+    nvhtop [-l [length]]
       print GPU utilization with usernames and CPU stats for each GPU-utilizing process
 
       -l|--command-length [length]     Print longer part of the commandline. If `length'
@@ -31,7 +28,7 @@ Note: To periodically check the output of nvidia-htop, use the `watch` utility: 
 
 ## Example output
 
-    $ nvidia-htop.py -l
+    $ nvhtop -l
     Mon May 21 15:06:35 2018
     +-----------------------------------------------------------------------------+
     | NVIDIA-SMI 390.25                 Driver Version: 390.25                    |
